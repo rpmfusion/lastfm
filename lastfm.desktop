@@ -1,10 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Last.fm
 Comment=Listen to Last.fm radio
 Exec=lastfm
 Icon=lastfm
 Terminal=false
 Type=Application
-Categories=Qt;Audio;AudioVideo;
+Categories=Audio;AudioVideo;Qt;
+StartupNotify=true
 
