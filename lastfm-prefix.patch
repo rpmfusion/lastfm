@@ -1,0 +1,31 @@
+diff -ur last.fm-1.4.0.56102/definitions.pro.inc last.fm-1.4.0.56102.new/definitions.pro.inc
+--- last.fm-1.4.0.56102/definitions.pro.inc	2007-12-05 13:39:27.000000000 +0100
++++ last.fm-1.4.0.56102.new/definitions.pro.inc	2007-12-17 22:10:25.000000000 +0100
+@@ -1,5 +1,5 @@
+ # This needs to be added here to enable a japanese build.
+-#DEFINES += HIDE_RADIO
++DEFINES += LIBDIR=\\\"$(libdir)\\\" DATADIR=\\\"$(datadir)\\\"
+ 
+ win32: ROOT_DIR = $$system( cd )
+ else:  ROOT_DIR = $$system( pwd )
+diff -ur last.fm-1.4.0.56102/src/libMoose/MooseCommon.cpp last.fm-1.4.0.56102.new/src/libMoose/MooseCommon.cpp
+--- last.fm-1.4.0.56102/src/libMoose/MooseCommon.cpp	2007-12-05 13:39:28.000000000 +0100
++++ last.fm-1.4.0.56102.new/src/libMoose/MooseCommon.cpp	2007-12-17 22:09:22.000000000 +0100
+@@ -43,7 +43,7 @@
+ QString
+ dataPath( QString file )
+ {
+-    return QApplication::applicationDirPath() + "/data/" + file;
++    return DATADIR"/lastfm/data/" + file;
+ }
+ 
+ 
+@@ -108,7 +108,7 @@
+         // Hack to get it working with VS2005
+         dirPath = qApp->applicationDirPath();
+     #else
+-        dirPath = qApp->applicationDirPath() + "/services";
++        dirPath = LIBDIR"/lastfm/services";
+     #endif
+ 
+     #ifndef QT_NO_DEBUG

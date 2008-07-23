@@ -1,0 +1,32 @@
+--- last.fm-1.4.2.58240/src/libFingerprint/MP3_Source_Qt.cpp.gcc43	2007-12-18 09:18:19.000000000 -0500
++++ last.fm-1.4.2.58240/src/libFingerprint/MP3_Source_Qt.cpp	2008-05-02 15:45:17.000000000 -0400
+@@ -21,6 +21,8 @@
+ #include <iostream>
+ #include <fstream>
+ #include <limits>
++#include <climits>
++#include <cstdlib>
+ #include <sstream>
+ #include <cassert>
+ #include <stdexcept>
+--- last.fm-1.4.2.58240/src/libFingerprint/fplib/src/FingerprintExtractor.cpp.gcc43	2007-12-18 09:18:19.000000000 -0500
++++ last.fm-1.4.2.58240/src/libFingerprint/fplib/src/FingerprintExtractor.cpp	2008-05-02 15:48:32.000000000 -0400
+@@ -31,6 +31,7 @@
+ #include <vector>
+ #include <stdexcept>
+ #include <cmath>
++#include <cstring>
+ 
+ #include <samplerate.h> // libsamplerate
+ 
+--- last.fm-1.4.2.58240/src/libFingerprint/fplib/src/OptFFT.cpp.gcc43	2007-12-18 09:18:19.000000000 -0500
++++ last.fm-1.4.2.58240/src/libFingerprint/fplib/src/OptFFT.cpp	2008-05-02 15:48:59.000000000 -0400
+@@ -30,6 +30,7 @@
+ 
+ #include <cmath>
+ #include <cassert>
++#include <cstdlib>
+ #include <iostream>
+ #include <memory.h> // for memcopy
+ 
+
