@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.0.56102
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -18,6 +18,8 @@ Buildroot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires: qt4-devel alsa-lib-devel zlib-devel
 BuildRequires: libsamplerate-devel fftw-devel libmad-devel libgpod-devel
 BuildRequires: desktop-file-utils
+# glib2-devel should be installed by libgpod-devel https://bugzilla.redhat.com/show_bug.cgi?id=446442
+BuildRequires: glib2-devel
 
 %description
 With Last.fm on your computer you can scrobble your tracks, share your 
@@ -80,6 +82,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Thu Jul 31 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
+- libgpod-devel bug #446442 not fixed in F-9
+
 * Wed Jul 23 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-3
 - Importing into rpmfusion
 - Vendor changed to rpmfusion
