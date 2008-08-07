@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.0.56102
-Release: 4%{?dist}
+Release: 4%{?dist}.1
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -52,7 +52,7 @@ music and people.
 %{__cp} -a bin/services %{buildroot}/%{_libdir}/%{name}
 %{__cp} -a bin/data/icons/as.png %{buildroot}/%{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
-desktop-file-install --vendor="rpmfusion" \
+desktop-file-install --vendor="livna" \
   --dir=%{buildroot}/%{_datadir}/applications %{SOURCE1}
 
 %clean
@@ -82,6 +82,10 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Thu Aug 07 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4.1
+
+- Reverting vendor to livna (http://lists.rpmfusion.org/pipermail/rpmfusion-deve
+lopers/2008-August/000713.html)
 * Thu Jul 31 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
 - libgpod-devel bug #446442 not fixed in F-9
 
