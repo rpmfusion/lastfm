@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.0.56102
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -50,7 +50,7 @@ music and people.
 %{__cp} -a bin/services %{buildroot}/%{_libdir}/%{name}
 %{__cp} -a bin/data/icons/as.png %{buildroot}/%{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
-desktop-file-install --vendor="rpmfusion" \
+desktop-file-install --vendor="livna" \
   --dir=%{buildroot}/%{_datadir}/applications %{SOURCE1}
 
 %clean
@@ -80,6 +80,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Thu Aug 07 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
+- Reverting vendor to livna (http://lists.rpmfusion.org/pipermail/rpmfusion-developers/2008-August/000713.html)
+
 * Wed Jul 23 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-3
 - Importing into rpmfusion
 - Vendor changed to rpmfusion
