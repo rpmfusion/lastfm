@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.2.58240
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -80,6 +80,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Wed Sep 10 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-2
+- Increasing EVR to allow rebuild
+
 * Fri Sep 05 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-1
 - New upstream version
 
