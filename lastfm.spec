@@ -1,8 +1,8 @@
 %define upname last.fm
 
 Name: lastfm
-Version: 1.4.0.56102
-Release: 4%{?dist}.1
+Version: 1.4.2.58240
+Release: 1%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -18,8 +18,6 @@ Buildroot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires: qt4-devel alsa-lib-devel zlib-devel
 BuildRequires: libsamplerate-devel fftw-devel libmad-devel libgpod-devel
 BuildRequires: desktop-file-utils
-# glib2-devel should be installed by libgpod-devel https://bugzilla.redhat.com/show_bug.cgi?id=446442
-BuildRequires: glib2-devel
 
 %description
 With Last.fm on your computer you can scrobble your tracks, share your 
@@ -82,12 +80,11 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
-* Thu Aug 07 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4.1
+* Fri Sep 05 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-1
+- New upstream version
 
-- Reverting vendor to livna (http://lists.rpmfusion.org/pipermail/rpmfusion-deve
-lopers/2008-August/000713.html)
-* Thu Jul 31 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
-- libgpod-devel bug #446442 not fixed in F-9
+* Thu Aug 07 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
+- Reverting vendor to livna (http://lists.rpmfusion.org/pipermail/rpmfusion-developers/2008-August/000713.html)
 
 * Wed Jul 23 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-3
 - Importing into rpmfusion
