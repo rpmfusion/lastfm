@@ -1,8 +1,8 @@
 %define upname last.fm
 
 Name: lastfm
-Version: 1.4.0.56102
-Release: 4%{?dist}
+Version: 1.4.2.58240
+Release: 1%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -80,6 +80,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Fri Sep 05 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-1
+- New upstream version
+
 * Thu Aug 07 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.0.56102-4
 - Reverting vendor to livna (http://lists.rpmfusion.org/pipermail/rpmfusion-developers/2008-August/000713.html)
 
