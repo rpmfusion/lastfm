@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.2.58240
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -74,12 +74,16 @@ fi
 %doc COPYING ChangeLog
 %defattr(-,root,root,-)
 %{_bindir}/*
-%{_libdir}/*
+%{_libdir}/*.so.*
+%{_libdir}/lastfm
 %{_datadir}/%{name}
 %{_datadir}/applications/*
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Sat Nov 15 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-3
+- Fixing libdir contains debug files (bz #160)
+
 * Wed Sep 10 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-2
 - Increasing EVR to allow rebuild
 
