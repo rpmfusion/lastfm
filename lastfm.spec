@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.2.58240
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -81,6 +81,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Fri Mar 27 2009 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-4
+- Rebuilt to catch up soname bump in libgpod
+
 * Sat Nov 15 2008 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-3
 - Fixing libdir contains debug files (bz #160)
 
