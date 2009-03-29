@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.2.58240
-Release: 4%{?dist}
+Release: 5%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -81,6 +81,9 @@ fi
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
 
 %changelog
+* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.4.2.58240-5
+- rebuild for new F11 features
+
 * Fri Mar 27 2009 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-4
 - Rebuilt to catch up soname bump in libgpod
 
