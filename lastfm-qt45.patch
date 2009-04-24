@@ -1,0 +1,12 @@
+diff -ur last.fm-1.4.2.58240/src/playcontrols.ui last.fm-1.4.2.58240.phonon/src/playcontrols.ui
+--- last.fm-1.4.2.58240/src/playcontrols.ui	2007-12-18 15:18:19.000000000 +0100
++++ last.fm-1.4.2.58240.phonon/src/playcontrols.ui	2009-04-24 12:49:00.000000000 +0200
+@@ -146,7 +146,7 @@
+   <customwidget>
+    <class>VolumeSlider</class>
+    <extends>QFrame</extends>
+-   <header>volumeslider.h</header>
++   <header>./volumeslider.h</header>
+    <container>1</container>
+   </customwidget>
+  </customwidgets>

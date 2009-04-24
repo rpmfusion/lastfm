@@ -2,7 +2,7 @@
 
 Name: lastfm
 Version: 1.4.2.58240
-Release: 5%{?dist}
+Release: 6%{?dist}
 Summary: Last.fm music client
 
 Group: Applications/Multimedia
@@ -13,6 +13,7 @@ Source1: lastfm.desktop
 Patch0: lastfm-prefix.patch
 Patch1: lastfm-gpod-pkgconfig.patch
 Patch2: lastfm-gcc43.patch
+Patch3: lastfm-qt45.patch
 Buildroot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires: qt4-devel alsa-lib-devel zlib-devel
@@ -29,6 +30,7 @@ music and people.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %configure 
@@ -79,8 +81,11 @@ fi
 %{_datadir}/%{name}
 %{_datadir}/applications/*
 %{_datadir}/icons/hicolor/32x32/apps/lastfm.png
-
+ 
 %changelog
+* Fri Apr 24 2009 Sergio Pascual <sergio.pasra at gmail.com> 1.4.2.58240-6
+- Fixes problem with Phonon::VolumeSlider (bz #518)
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.4.2.58240-5
 - rebuild for new F11 features
 
